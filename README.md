@@ -1,6 +1,6 @@
 # Example
 
-This seems like a strange issue?! pynguins provides many options … am I doing something wrong?
+This seems like a strange issue?! pynguin provides many options … am I doing something wrong?
 
  - running ``run.sh``
      - generates ``pynguin_report`` but ``pynguin`` is given as output dir
