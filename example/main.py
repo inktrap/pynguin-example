@@ -1,28 +1,14 @@
 #!/usr/bin/env python3.9
 
-from typing import Union
+# not necessary if this would be a proper package:
+if __name__ != "__main__":
+    import os
+    import sys
 
-numeric = Union[int, float, complex]
+    script_dir = os.path.dirname(os.path.realpath(__file__))
+    sys.path.insert(0, os.path.join(script_dir))
 
-
-def minus(a: numeric, b: numeric) -> numeric:
-    """
-    :param a: the first numeric operand
-    :param b: the second numeric operand
-    :returns: result of substraction
-
-    """
-    return a - b
-
-
-def plus(a: numeric, b: numeric) -> numeric:
-    """
-    :param a: the first numeric operand
-    :param b: the second numeric operand
-    :returns: result of addition
-
-    """
-    return a + b
+from lib import ops
 
 
 def main() -> None:
@@ -30,8 +16,8 @@ def main() -> None:
     :returns: None
 
     """
-    print(plus(1, 2))
-    print(minus(1, 2))
+    print(ops.plus(1, 2))
+    print(ops.minus(1, 2))
 
 
 if __name__ == "__main__":
